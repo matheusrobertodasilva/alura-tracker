@@ -14,7 +14,7 @@
         name: 'CronometroI',
         props:{
             tempoEmSegundos:{
-                type:Number,
+                type: Number,
                 default:0
             }
         },
