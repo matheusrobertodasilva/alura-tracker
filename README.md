@@ -1,5 +1,9 @@
 # alura-tracker
 
+### Link da aplicação:
+
+https://alura-tracker-gules-psi.vercel.app/?vercelToolbarCode=d9n_v3sNBG1p_8K#/
+
 ## Project setup
 ```
 npm install
@@ -20,5 +24,6 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Sobre o projeto:
+Projeto realizado na formação de de vue3 na instituição de ensino da alura. 
+O curso tem por objetivo apresentar na pratica como um dos frameworks mais usado atualmente funciona, e conceitos basicos e avançados como ciclo de vida de uma aplicação...
