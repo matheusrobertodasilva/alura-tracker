@@ -31,15 +31,15 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import IProjeto from '../interfaces/IProjeto'
+import { computed, defineComponent } from 'vue';
+import { useStore } from '@/store/index'
+import IProjeto from '@/interfaces/IProjeto';
 
 export default defineComponent({
     name: 'ProjetosI',
     data(){
         return {
-            nomeDoProjeto: '',
-            projetos: [] as IProjeto[]
+            nomeDoProjeto: ''
         };
     },
     methods: {
@@ -51,6 +51,13 @@ export default defineComponent({
             this.projetos.push(projeto)
             this.nomeDoProjeto = ''
 
+        },
+    },
+    setup(){
+        const store = useStore()
+        return {
+            store,
+            projetos: computed(() => store.state.projetos)
         }
     }
 })
