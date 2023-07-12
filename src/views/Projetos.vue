@@ -1,29 +1,29 @@
 <template>
     <section class="projetos">
         <h1 class="title">Projetos</h1>
-        <form @submit.prevent="salvar">
-            <div class="field">
-                <label for="nomeDoProjeto" class="label">Nome do Projeto</label>
-                <input 
-                    type="text" 
-                    class="input" 
-                    v-model="nomeDoProjeto" 
-                    id="nomeDoProjeto"
-                >
-            </div>
-            <div class="field">
-                <button class="button" type="submit">Salvar</button>
-            </div>
-        </form>
+        <router-link to="/projetos/novo" class="button">
+            <span class="icon is-small">
+                <i class="fas fa-plus"></i>
+            </span>
+            <span>Novo Projeto</span>
+        </router-link>
         <table class="table is-fullwidth">
             <thead>
                 <th>ID</th>
                 <th>NOME</th>
+                <th>ações</th>
             </thead>
             <tbody>
                 <tr v-for="projeto in projetos" :key="projeto.id">
                     <td>{{ projeto.id }}</td>
                     <td>{{ projeto.nome }}</td>
+                    <td>
+                        <router-link :to="`/projetos/${projeto.id}`" class="button">
+                            <span class="icon is-small">
+                                <i class="fas fa-pencil-alt"></i>
+                            </span>
+                        </router-link>
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -33,30 +33,12 @@
 <script lang="ts">
 import { computed, defineComponent } from 'vue';
 import { useStore } from '@/store/index'
-import IProjeto from '@/interfaces/IProjeto';
 
 export default defineComponent({
     name: 'ProjetosI',
-    data(){
-        return {
-            nomeDoProjeto: ''
-        };
-    },
-    methods: {
-        salvar(){
-            const projeto: IProjeto = {
-                nome: this.nomeDoProjeto,
-                id: new Date().toISOString()
-            }
-            this.projetos.push(projeto)
-            this.nomeDoProjeto = ''
-
-        },
-    },
     setup(){
         const store = useStore()
         return {
-            store,
             projetos: computed(() => store.state.projetos)
         }
     }
