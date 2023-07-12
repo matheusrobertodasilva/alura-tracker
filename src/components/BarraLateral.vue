@@ -72,7 +72,7 @@ header {
 }
 
 .panel li {
-    margin: 8px 0;
+    margin: 10px 0;
 }
 .link {
     color:#fff;
