@@ -18,15 +18,6 @@
         "id": 1,
         "nome": "Alura tracker 3.0"
       }
-    },
-    {
-      "duracaoEmSegundos": 5,
-      "descricao": "teste 1.2",
-      "projeto": {
-        "nome": "testando refatoração",
-        "id": 2
-      },
-      "id": 2
     }
   ]
 }
