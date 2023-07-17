@@ -2,7 +2,31 @@
   "projetos": [
     {
       "id": 1,
-      "nome": "alura Tracker 3.5"
+      "nome": "Alura tracker 3.0"
+    },
+    {
+      "nome": "testando refatoração",
+      "id": 2
+    }
+  ],
+  "tarefas": [
+    {
+      "id": 1,
+      "duracaoEmSegundos": 120,
+      "descricao": "Configuração do ambiente",
+      "projeto": {
+        "id": 1,
+        "nome": "Alura tracker 3.0"
+      }
+    },
+    {
+      "duracaoEmSegundos": 5,
+      "descricao": "teste 1.2",
+      "projeto": {
+        "nome": "testando refatoração",
+        "id": 2
+      },
+      "id": 2
     }
   ]
 }
