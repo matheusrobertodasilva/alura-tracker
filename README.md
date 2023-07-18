@@ -1,9 +1,5 @@
 # alura-tracker
 
-### Link da aplicação:
-
-https://alura-tracker-gules-psi.vercel.app/?vercelToolbarCode=d9n_v3sNBG1p_8K#/
-
 ## Sobro o Projeto
 Projeto desenvolvido em 3 cursos da alura, que tem por finalidade ao decorrer do desenvolvimento do projeto aprender Vue3. Os cursos realizados nesse projeto são:
 
